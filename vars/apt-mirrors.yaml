@@ -1,0 +1,72 @@
+---
+mirrors:
+  x86_64:
+    # [JP] ICSCoE
+    - http://ftp.udx.icscoe.jp/Linux/ubuntu/
+    # [JP] FAIRWAY Corportaion
+    - http://mirror.fairway.ne.jp/ubuntu/
+    # [JP] Tsukuba WIDE
+    - http://ftp.tsukuba.wide.ad.jp/Linux/ubuntu/
+    # [JP] RIKEN
+    - http://ftp.riken.jp/Linux/ubuntu/
+    # [JP] TI Mirrors Japan - Ubuntu
+    - http://jp.mirror.coganng.com/ubuntu/
+    # [JP] UNIVERSITY OF TOYAMA with Ubuntu Japanese LoCo
+    - http://ubuntutym.u-toyama.ac.jp/ubuntu/
+    # [JP] Yamagata University
+    - http://linux.yz.yamagata-u.ac.jp/ubuntu/
+    # [JP] KDDI R&D Laboratories Inc.
+    - http://www.ftp.ne.jp/Linux/packages/ubuntu/archive/
+    # [JP] JAIST
+    - http://ftp.jaist.ac.jp/pub/Linux/ubuntu/
+    # [KR] Elice Inc.
+    - http://mirror.elice.io/ubuntu/
+    # [KR] Yuki Network - Ubuntu
+    - http://mirror.yuki.net.uk/ubuntu/
+    # [KR] DevPG
+    - http://devpg.net/ubuntu/
+    # [KR] Kakao Corp.
+    - http://mirror.kakao.com/ubuntu/
+    # [TW] Chunghwa Telecom
+    - http://mirror01.idc.hinet.net/ubuntu/
+    # [TW] Blendbyte Inc.
+    - http://tw1.mirror.blendbyte.net/ubuntu/
+    # [TW] NCHC, Taiwan
+    - http://free.nchc.org.tw/ubuntu/
+    # [TW] Free Software Lab
+    - http://ftp.tw.debian.org/ubuntu/
+    # [TW] NCTUCSCC
+    - http://ubuntu.cs.nctu.edu.tw/ubuntu/
+    # [TW] Taiwan Mirror
+    - http://ftp.mirror.tw/pub/ubuntu/ubuntu/
+    # [CN] Tencent Cloud
+    - http://mirrors.cloud.tencent.com/ubuntu/
+    # [CN] Alibaba Cloud Computing
+    - http://mirrors.aliyun.com/ubuntu/
+    # [CN] Huawei Cloud
+    - http://repo.huaweicloud.com/ubuntu/
+    # [CN] Gigabit Hosting
+    - http://hk.mirrors.thegigabit.com/ubuntu/
+    # [CN] xTom
+    - https://mirror.xtom.com.hk/ubuntu/
+    # [SG] 0ms Group
+    - https://0ms.run/mirrors/mirror.enzu.com/ubuntu/
+  aarch64:
+    # [JP] Tsukuba WIDE
+    - http://ftp.tsukuba.wide.ad.jp/Linux/ubuntu-ports/
+    # [JP] TI Mirrors Japan - Ubuntu
+    - http://jp.mirror.coganng.com/ubuntu-ports/
+    # [KR] Yuki Network - Ubuntu
+    - http://mirror.yuki.net.uk/ubuntu-ports/
+    # [TW] NCHC, Taiwan
+    - http://free.nchc.org.tw/ubuntu-ports/
+    # [TW] Free Software Lab
+    - http://ftp.tw.debian.org/ubuntu-ports/
+    # [CN] Tencent Cloud
+    - http://mirrors.cloud.tencent.com/ubuntu-ports/
+    # [CN] Alibaba Cloud Computing
+    - http://mirrors.aliyun.com/ubuntu-ports/
+    # [CN] Huawei Cloud
+    - http://repo.huaweicloud.com/ubuntu-ports/
+    # [CN] xTom
+    - https://mirror.xtom.com.hk/ubuntu-ports/

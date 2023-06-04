@@ -1,0 +1,68 @@
+---
+
+- name: Setup tasks for Ubuntu
+  hosts: all
+  vars_files:
+    - ./vars/apt-mirrors.yaml
+
+  tasks:
+    - name: Install and setup prerequisites
+      become: true
+      become_user: root
+      block:
+        - name: Install pre-requisites
+          ansible.builtin.apt:
+            name:
+              - software-properties-common
+              - pixz
+              - pigz
+            state: present
+            update_cache: true
+
+        - name: Set `pigz` as the selected `gzip` alternative
+          community.general.alternatives:
+            name: gzip
+            path: /usr/bin/pigz
+            state: selected
+
+        - name: Set `pixz` as the selected `xz` alternative
+          community.general.alternatives:
+            name: xz
+            path: /usr/bin/pixz
+            state: selected
+
+    - name: Install and setup apt-fast
+      become: true
+      become_user: root
+      block:
+        - name: Add apt-fast repository
+          ansible.builtin.apt_repository:
+            repo: 'ppa:apt-fast/stable'
+            state: present
+            update_cache: false
+
+        - name: Replace apt repo with faster mirror
+          ansible.builtin.replace:
+            path: /etc/apt/sources.list
+            regexp: 'https?://((?!security).)*/'
+            replace: '{{ mirrors[ansible_architecture][0] }}'
+
+        - name: Install apt-fast
+          ansible.builtin.apt:
+            name:
+              - apt-fast
+            state: present
+            update_cache: true
+
+        - name: Add apt-fast repos
+          ansible.builtin.blockinfile:
+            path: /etc/apt-fast.conf
+            insertafter: "#MIRRORS=\\( 'none' \\)"
+            block: "MIRRORS=( '{{ mirrors[ansible_architecture] | join(', ') }}' )"
+            state: present
+
+        - name: Increase connection number
+          ansible.builtin.replace:
+            path: /etc/apt-fast.conf
+            regexp: '_MAXNUM=\d+'
+            replace: '_MAXNUM=30'
